@@ -6,11 +6,19 @@ return "INVALID".
 */
 
 // Your code here 
-
-// console.log(isValidSubStr("JOY", "joy"));                     // => 'VALID'
-// console.log(isValidSubStr("The cat jumped!", "he cat jump")); // => 'VALID'
-// console.log(isValidSubStr("Time to program", "time"));        // => 'VALID'
-// console.log(isValidSubStr("happy", "happiness"));             // => 'INVALID'
+function isValidSubStr (str1, str2) {
+    let lowStr1 = str1.toLowerCase();
+    let lowStr2 = str2.toLowerCase();
+    if (lowStr1.indexOf(lowStr2) === -1) {
+        return "INVALID";
+    } else {
+        return "VALID";
+    }
+}
+console.log(isValidSubStr("JOY", "joy"));                     // => 'VALID'
+console.log(isValidSubStr("The cat jumped!", "he cat jump")); // => 'VALID'
+console.log(isValidSubStr("Time to program", "time"));        // => 'VALID'
+console.log(isValidSubStr("happy", "happiness"));             // => 'INVALID'
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = isValidSubStr;

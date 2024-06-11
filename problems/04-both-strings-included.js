@@ -6,11 +6,17 @@ it should return false.
 */
 
 // Your code here 
-
-// console.log(bothStringsIncluded("how now brown cow?", "panther", "cow"));  //=> false
-// console.log(bothStringsIncluded("Dance party!", "Dance", "party"));        //=> true
-// console.log(bothStringsIncluded("Question?", "tion", "?"));                //=> true
-// console.log(bothStringsIncluded("I love programming", "apple", "potato")); //=> false
+function bothStringsIncluded(sentStr, str1, str2) {
+    if (sentStr.indexOf(str1) !== -1 && sentStr.indexOf(str2) !== -1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+ // console.log(bothStringsIncluded("how now brown cow?", "panther", "cow"));  //=> false
+ // console.log(bothStringsIncluded("Dance party!", "Dance", "party"));        //=> true
+ // console.log(bothStringsIncluded("Question?", "tion", "?"));                //=> true
+ // console.log(bothStringsIncluded("I love programming", "apple", "potato")); //=> false
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = bothStringsIncluded;
